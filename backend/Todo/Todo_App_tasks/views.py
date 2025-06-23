@@ -13,6 +13,3 @@ class TaskViewSet(viewsets.ModelViewSet):
         serializer.save(user=self.request.user)
 
 
-
-
-# Create your views here.
