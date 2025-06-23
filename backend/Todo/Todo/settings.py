@@ -88,8 +88,12 @@ WSGI_APPLICATION = 'Todo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'todo_db',
+        'USER':'postgres',
+        'PASSWORD':'12345',
+        'HOST':'localhost',
+        'PORT':'5432',
     }
 }
 
@@ -135,4 +139,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'users.CustomUser'
+AUTH_USER_MODEL = 'Todo_App.CustomUser'
